@@ -5,16 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RLG Construction LLC - Indianapolis</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/temp.css">
   </head>
   <body>
-    <main>
+    <main id="main">
+      <a class='skip' href='/#main'>skip to main content</a>
+        <header>
+            <!-- Desktop Navbar -->
+            <div class="mobile-wrapper">
+                <div class="mobile-nav container mobile-nav-container">
+                    <img id="mobile-logo" src="https://d33wubrfki0l68.cloudfront.net/3745959f2d7eede91c7a6a8751368d2d234a7edd/b82b2/images/logo-light.png" alt="mobile_company_logo" height="60">
+                
+                    <!-- Hamburger Menu -->
+                    <button aria-label="open the menu" id="menu-button" class="hamburger hamburger--spring" onclick="toggleNav()" type="button">
+                        <span aria-hidden="true" class="hamburger-box">
+                            <span aria-hidden="true" class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- ============================================ -->
+            <!--                   NAVIGATION                 -->
+            <!-- ============================================ -->
+            <nav>
+                <div class="navbar-menu">
+                    <div id="side-menu" class="side-nav">
+                        <img src="https://d33wubrfki0l68.cloudfront.net/f525bebad8ec45967899542ab37f9756287e1bbf/b31d2/images/logo-light-desktop.png" alt="company logo" width="100px">
+                        <div aria-hidden="true" class="neon" id="desktop-neon">
+                            <span>Afterdark</span>
+                            <span>f</span>
+                            <span>t</span>
+                            <span>e</span>
+                            <span>r</span>
+                            <span>D</span>
+                            <span>a</span>
+                            <span>r</span>
+                            <span>k</span>
+                        </div>
+                        <ul id="on-top" class="navbar-links">
+                            <li class="nav-li">
+                                <a class='active-menu' href='/'>Home</a>
+                            </li>
+                            <li class="nav-li">
+                                <a href='/html/about'>About</a>
+                            </li>
+                            <li class="nav-li">
+                                <a href='/html/services'>Services</a>
+                            </li>
+                            <li class="nav-li">
+                                <a href='/#portfolio'>Portfolio</a>
+                            </li>
+                            <li class="nav-li">
+                                <a href='/blog/recent-posts'>Blog</a>
+                            </li>
+                            <li class="nav-li">
+                                <a href='/html/contact'>Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <h1>RLG Construction LLC</h1> 
         <a href="/contact.html">Contact</a>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, asperiores nemo vel veniam eligendi sapiente, quaerat, maiores illo ad magni assumenda ut ullam facere voluptates? Neque vitae dignissimos sequi repudiandae.</p> 
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, asperiores nemo vel veniam eligendi sapiente, quaerat, maiores illo ad magni assumenda ut ullam facere voluptates? Neque vitae dignissimos sequi repudiandae.</p> 
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, asperiores nemo vel veniam eligendi sapiente, quaerat, maiores illo ad magni assumenda ut ullam facere voluptates? Neque vitae dignissimos sequi repudiandae.</p> 
     </main>
+    <footer>
+      <img aria-hidden="true" class="footer-img light-mode-svg" src="https://d33wubrfki0l68.cloudfront.net/c272e13f11fec5e8a82b6342bc194b3eb74b5b72/7cf10/images/footer-swoosh.svg" alt="">
+      <img aria-hidden="true" class="footer-img dark-mode-svg" src="https://d33wubrfki0l68.cloudfront.net/3b756ae30ef51ccd8564c2978ea8a5a70f1931f8/95db7/images/footer-swoosh-dark.svg" alt="">
+      <div class="container">
+          <div class="flex-group">
+              <div class="dark-mode-group">
+                  <div aria-hidden="true" class="light">
+                      <div class="wire"></div>
+                      <div class="triangle"></div>
+                      <div class="bulb"></div>
+                  </div>
+                  <!--SVG Light-->
+                  <button class="dark-mode-button" aria-label="dark mode toggle">
+                      <span aria-hidden="true" class="dark-toggle">
+                          <span class="DTspan"></span>
+                      </span>
+                  </button>
+                  <p>SWITCH TO DARK MODE</p>
+              </div>
+              <div class="footer-item">
+                  <h2>Navigation</h2>
+                  <div aria-hidden="true" class="footer-line"></div>
+                  <a class='link' href='/'>Home</a>
+                  <a class='link' href='/html/about'>About</a>
+                  <a class='link-long' href='/html/services'>Services</a>
+                  <a class='link-long' href='/#portfolio'>Portfolio</a>
+                  <a class='link-long' href='/html/contact'>Contact</a>
+              </div>
+              <div class="footer-item">
+                  <h2>Services</h2>
+                  <div aria-hidden="true" class="footer-line"></div>
+                  <p>Web Design</p>
+                  <p>Website Maintenance</p>
+                  <p>SEO Services</p>
+                  <p>Content Creation</p>
+                  <p>Logo Design</p>
+              </div>
+          </div>
+      </div>
+      <div class="branding">
+          <p>Copyright &copy;2021 | Oak Harbor Web Designs | All Rights Reserved</p>
+      </div>
+    </footer>
 	<script src="index.js"></script>
+    <script>
+        /* jQuery for the navigation animation */
+        var $hamburger = $(".hamburger");
+        $hamburger.on("click", function(e) {
+            $hamburger.toggleClass("is-active");
+            // Do something else, like open/close menu
+        });
+
+        /* Code for the toggling of the navbar */
+        let toggleNavStatus = false;
+        let toggleNav = function () {
+            var $html = $("html");
+            var $container = $(".container");
+            var $SidebarLi = $(".side-nav ul li");
+            let getSidebar = document.querySelector(".navbar-menu");
+            let getSidebarUL = document.querySelector(".side-nav ul");
+            let getSidebarLinks = document.querySelectorAll(".side-nav a");
+            let getSidebarVisibility = document.querySelector(".side-nav");
+
+            if (toggleNavStatus === false) {
+                $SidebarLi.addClass("open");
+            }
+            else if (toggleNavStatus === true) {
+                $SidebarLi.removeClass("open");
+            }
+            if (toggleNavStatus === false) {
+                getSidebarVisibility.style.visibility = "visible";
+                getSidebarLinks.forEach(function(item, index) {
+                    item.style.opacity = "1";
+                    item.style.visibility = "visible";
+                    });
+                getSidebar.style.width = "60%";
+                $html.addClass("clicked");
+                $container.addClass("clicked");
+                toggleNavStatus = true;
+            } 
+
+            else if (toggleNavStatus === true) {
+                getSidebarLinks.forEach(function(item, index) {
+                    item.style.opacity = "0";
+                    item.style.transitionDelay = "0s";
+                    item.style.visibility = "hidden";
+                    });
+                    getSidebar.style.width = "0";
+                    $html.removeClass("clicked");
+                $container.removeClass("clicked");
+                    toggleNavStatus = false;
+            }
+        }
+    </script>
+    <script>
+        const bannerCloseButton = document.querySelector("#beta-form #beta-submit");
+        const bannerSubmitButton = document.querySelector("#beta-form #close-submit");
+        const banner = document.querySelector(".banner");
+        let buttonClosed = localStorage.getItem("buttonClosed");
+
+        bannerSubmitButton.addEventListener('click', () => {
+            banner.classList.add("close");
+            localStorage.setItem("buttonClosed", "true");
+        }
+        );
+        if (buttonClosed == "true") {
+            banner.classList.add("close");
+        }
+    </script>
   </body>
 </html>
