@@ -1,10 +1,206 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="format-detection" content="telephone=no">
+
+        <meta property="og:title" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content=""/>
+        <meta property="og:image" content=""/>
+        <meta property="og:image:secure_url" content=""/>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- CSS -->
+        <link href='/assets/css/style_contact.css' rel='stylesheet'/>
+        <!-- jQuery -->
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <title>Residential and Commercial Services | RLG Construction LLC</title>
+    </head>
 <body>
-  <h1>Contact Page</h1>
+    <a class='skip' href='/html/contact#main'>skip to main content</a>
+    <header>
+        <button class="dark-mode-button top-dark-mode-button" aria-label="dark mode toggle">
+            <span aria-hidden="true" class="dark-toggle">
+                <span class="DTspan"></span>
+            </span>
+        </button>
+        <!-- Desktop Navbar -->
+        <div class="mobile-wrapper">
+            <div class="mobile-nav container mobile-nav-container">
+                <img id="mobile-logo" src="/images/RLG Construction_Transparent_Light.png" alt="mobile_company_logo" height="60">
+                <div aria-hidden="true" class="neon">
+                    <span>A</span>
+                    <span>f</span>
+                    <span>t</span>
+                    <span>e</span>
+                    <span>r</span>
+                    
+                    <span>D</span>
+                    <span>a</span>
+                    <span>r</span>
+                    <span>k</span>
+                </div>
+                <!-- Hamburger Menu -->
+                <button aria-label="open the menu" id="menu-button" class="hamburger hamburger--spring" onclick="toggleNav()" type="button">
+                    <span aria-hidden="true" class="hamburger-box">
+                        <span aria-hidden="true" class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    
+        <!-- ============================================ -->
+        <!--                   NAVIGATION                 -->
+        <!-- ============================================ -->
+    
+        <nav>
+            <div class="navbar-menu">
+                <div id="side-menu" class="side-nav">
+                    <img src="/images/RLG Construction_Transparent-Cropped.png" alt="company logo" width="100px">
+                    <div aria-hidden="true" class="neon" id="desktop-neon">
+                        <span>A</span>
+                        <span>f</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>r</span>
+                        
+                        <span>D</span>
+                        <span>a</span>
+                        <span>r</span>
+                        <span>k</span>
+                    </div>
+                    <ul id="on-top" class="navbar-links">
+                        <li class="nav-li"><a href='/'>Home</a></li>
+                        <li class="nav-li"><a href='/html/about'>About</a></li>
+                        <li class="nav-li"><a href='/html/services'>Services</a></li>
+                        <li class="nav-li"><a href='/#portfolio'>Portfolio</a></li>
+                        <li class="nav-li"><a href='/blog/recent-posts'>Blog</a></li>
+                        <li class="nav-li"><a class='active-menu' href='/html/contact'>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <!-- ============================================ -->
+        <!--                   LANDING                    -->
+        <!-- ============================================ -->
+        <section id="page-header">
+            <h1>Contact Us</h1>
+        </section>
+        <!-- ============================================ -->
+        <!--                     FORM                     -->
+        <!-- ============================================ -->
+        <section id="valley-form" class="container">
+            <div class="quote">
+                <div class="border-group">
+                    <p>Email:</p>
+                    <p>limbergolac@rlgconstruction.net</p>
+                </div>
+                <div class="border-group">
+                    <p>Phone:</p>
+                    <p>(123) 456-7890</p>
+                </div>
+            </div>
+            <div class="form-wrapper">
+                <form id='contact' method='post' name='form'><input type='hidden' name='form-name' value='form' />
+                    <h3 class="contact-topper"><span>DROP</span> US A LINE</h3>
+                    
+                        <input aria-label="name" name="name" placeholder="Name" type="text" tabindex="1" required>
+                        <input aria-label="name" name="name" placeholder="Business" type="text" tabindex="2" required>
+                        <input aria-label="email" name="email" placeholder="Email Address" type="email" tabindex="3" required>
+                        <input aria-label="phone number" name="phone" placeholder="Phone Number" type="tel" tabindex="4" required>
+                        <textarea aria-label="write your message" name="message" placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                       
+                    <p class="form-submit">
+                        <button name="submit" type="submit" id="contact-submit" class="primary button-solid" data-submit="...Sending">Submit</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!--                    FOOTER                    -->
+    <!-- ============================================ -->
+
+    <footer>
+        <img aria-hidden="true" class="footer-img light-mode-svg" src="/images/footer-swoosh.svg" alt="">
+        <img aria-hidden="true" class="footer-img dark-mode-svg" src="/images/footer-swoosh-dark.svg" alt="">
+        <div class="container">
+            <div class="flex-group">
+                <div class="dark-mode-group">
+                    <div aria-hidden="true" class="light">
+                        <div class="wire"></div>
+                        <div class="triangle"></div>
+                        <div class="bulb"></div>
+                    </div>
+                    <!--SVG Light-->
+                    <button class="dark-mode-button" aria-label="dark mode toggle">
+                        <span aria-hidden="true" class="dark-toggle">
+                            <span class="DTspan"></span>
+                        </span>
+                    </button>
+                    <p>SWITCH TO DARK MODE</p>
+                </div>
+                <div class="footer-item image-box">
+                    <img class="footer-logo mobile-display" src="/images/RLG Construction_Transparent_Light.png" alt="rlg construction logo" height="50">
+                    <img class="footer-logo desktop-display" src="/images/RLG Construction_Transparent-Cropped.png" alt="rlg construction logo" height="50">
+                    <div aria-hidden="true" class="neon" id="footer-neon">
+                        <span>A</span>
+                    <span>f</span>
+                    <span>t</span>
+                    <span>e</span>
+                    <span>r</span>
+                    
+                    <span>D</span>
+                    <span>a</span>
+                    <span>r</span>
+                    <span>k</span>
+                    </div>
+                    <a href="mailto:rigoba98@hotmail.com">limbergolac@rlgconstruction.net</a>
+                    <a href="tel:123-456-7890">(123) 456-7890</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Navigation</h2>
+                    <div aria-hidden="true" class="footer-line"></div>
+                    <a class='link' href='/'>Home</a>
+                    <a class='link' href='/html/about'>About</a>
+                    <a class='link-long' href='/html/services'>Services</a>
+                    <a class='link-long' href='/#portfolio'>Portfolio</a>
+                    <a class='link-long' href='/html/contact'>Contact</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Services</h2>
+                    <div aria-hidden="true" class="footer-line"></div>
+                    <p>Web Design</p>
+                    <p>Website Maintenance</p>
+                    <p>SEO Services</p>
+                    <p>Content Creation</p>
+                    <p>Logo Design</p>
+                </div>
+            </div>
+        </div>
+        <div class="branding">
+            <p>Copyright &copy;2024 | RLG Construction LLC | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script defer src='/assets/js/app.js'></script>
 </body>
 </html>
